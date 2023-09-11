@@ -3,11 +3,14 @@ import React from 'react';
 import StackNavigation from './src/Navigation/StackNavigation';
 import {Provider} from 'react-redux';
 import store from './src/Redux/Store/Store';
+import {TailwindProvider} from 'tailwindcss-react-native';
 
 const App = () => {
   return (
     <Provider store={store}>
-      <StackNavigation />
+      <TailwindProvider>
+        <StackNavigation />
+      </TailwindProvider>
     </Provider>
   );
 };

@@ -1,8 +1,10 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
-import Flash from '../Screens/Flash';
-import HomeScreen from '../Screens/HomeScreen';
+import Register from '../Screens/Register';
+import Login from '../Screens/Login';
+import DashBoard from '../Screens/Home';
+import BuyPage from '../Components/BuyPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,13 +13,23 @@ const StackNavigation = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="FlashScreen"
-          component={Flash}
+          name="Login"
+          component={Login}
           options={{header: () => null}}
         />
         <Stack.Screen
-          name="HomeScreen"
-          component={HomeScreen}
+          name="Register"
+          component={Register}
+          options={{header: () => null}}
+        />
+        <Stack.Screen
+          name="DashBoard"
+          component={DashBoard}
+          options={{header: () => null}}
+        />
+        <Stack.Screen
+          name="BuyPage"
+          component={BuyPage}
           options={{header: () => null}}
         />
       </Stack.Navigator>
